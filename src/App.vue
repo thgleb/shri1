@@ -26,8 +26,6 @@ export default {
 };
 </script>
 
-<style>
-  @import "/static/styles/normalize.min.css";
-  @import "/static/styles/font-awesome.min.css";
-  @import "/static/styles/main.css";
-</style>
+<style src="../static/styles/main.css"></style>
+<style src="../static/styles/normalize.min.css"></style>
+<style src="../static/styles/font-awesome.min.css"></style>
