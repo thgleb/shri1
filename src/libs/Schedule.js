@@ -5,9 +5,13 @@
  *   - a schedule of rooms at a given time interval
  *   - a timetable filtered by teacher
  */
+import baseurl from "../../config/baseurl";
+
 class Schedule {
   static get ApiUrl() {
-    return "/static/data.json";
+    return (process.env.NODE_ENV === "production"
+            ? baseurl.build
+            : baseurl.dev) + "static/data.json";
   }
 
   constructor() {
