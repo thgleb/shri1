@@ -9,10 +9,15 @@ import ClassFull from "@/components/ClassFull";
 
 import NotFound from "@/components/NotFound";
 
+import baseurl from "../config/baseurl";
+
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  mode: "hash",
+  base: (process.env.NODE_ENV === "production"
+          ? baseurl.build
+          : baseurl.dev),
   routes: [
     {
       path: "/",
